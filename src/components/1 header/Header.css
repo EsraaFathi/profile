@@ -1,0 +1,187 @@
+/* table of content */
+
+/* 1.header content
+2.icons&buttons
+3.Modal= pop up
+4. Responsive (media queiry) */
+
+
+/* ===========
+1.header content
+============*/
+
+
+header ul.flex {
+   gap: 16px;
+}
+
+header ul li a {
+   color: var(--title);
+   opacity: 0.9;
+   font-size: 0.9rem;
+   font-weight: 600;
+}
+
+header ul li a:hover {
+
+   opacity: 0.95;
+   font-size: 0.95rem;
+   font-weight: 700;
+   /* color: var(--hoverheader); */
+   color: var(--hoverheader);
+}
+
+header button {
+   font-size: 1.2rem;
+}
+
+header.flex {
+   justify-content: space-between;
+   padding: 0 2.4rem;
+   margin-top: 1.2rem;
+
+}
+
+header.flex nav {
+   background-color: var(--bgHeader);
+   padding: 0.77rem 1.6rem;
+   border-radius: 55px;
+   box-shadow: 10px 5px 15px var(--purple);
+}
+
+header button.menue {
+   display: none;
+}
+
+
+
+/*======
+  2. icon button 
+  ========*/
+header .icon-th-menu,
+header .mode {
+   background-color: var(--bgHeader);
+   height: 2.4rem;
+   width: 2.4rem;
+   border-radius: 50%;
+   justify-content: center;
+   cursor: pointer;
+   text-align: center;
+   border: 1px solid rgba(248, 67, 209, 0.5);
+   transition: 0.2s;
+
+}
+
+header .icon-th-menu:hover,
+header .mode:hover {
+
+   color: var(--purple);
+   border: 1px solid var(--purple);
+}
+
+header .icon-x {
+   color: var(--purple);
+   font-size: 1.3rem;
+   transition: 0.3s;
+
+}
+
+header .icon-x:hover {
+   color: crimson;
+   font-size: 1.6rem;
+   rotate: 180deg;
+
+}
+
+/*========
+  3. model=>>pop up 
+  =========*/
+header .fixed {
+   position: fixed;
+   /* top: 0;
+bottom: 0;
+right: 0;
+left: 0;    ==>> inset:0*/
+   inset: 0;
+   z-index: 11;
+   background-color: rgba(90, 88, 90, 0.8);
+/* filter: blur(8px); */
+backdrop-filter: blur(4px);
+}
+
+
+@keyframes mymove {
+   0% {
+      scale: 0
+   }
+
+   60% {
+      scale: 1.2;
+   }
+
+   100% {
+      scale: 1
+   }
+
+}
+
+header .fixed ul.modal {
+   animation: mymove 0.9s 1;
+   width: 85%;
+   /* margin-left: auto;
+   margin-right: auto;  ===>>> */
+   margin-inline: auto;
+   margin-top: 2rem;
+   border-radius: 1rem;
+   padding: 1rem 2rem;
+   background-color: var(--secondary);
+}
+
+header .fixed ul.modal li {
+   border-bottom: 1px solid var(--border);
+   padding-bottom: 0.7rem;
+   padding-top: 0.7rem;
+
+}
+
+
+header .fixed ul.modal li:last-child {
+
+   border: none;
+}
+
+header .fixed ul.modal li a {
+   font-size: 1.2rem;
+   transition: 0.3s;
+}
+header .fixed ul.modal li a:hover {
+   color: var(--bgHeader);
+   opacity: 1;
+   font-size: 1rem;
+   font-weight: 800;
+   }
+
+header .fixed ul.modal li:first-child {
+   text-align: right;
+   border: none;
+   padding-bottom: 0;
+   padding-top: 0.2rem;
+}
+
+
+
+
+/* =========
+4.Resposive 
+============*/
+@media (max-width: 700px) {
+   header.flex nav {
+      display: none;
+   }
+
+   header button.menue {
+      display: block;
+   }
+}
+
+
