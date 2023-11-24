@@ -7,7 +7,7 @@ function Home(){
 
     return(
         <>
-        <div> tttttttttoooooooo
+<div>
         <Hero/>
 <Main />
 <Contact/>

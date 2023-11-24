@@ -28,7 +28,7 @@
       subtitle: "    A CRUD system is a software framework or approach that facilitates the management of data in a database. CRUD  stands for Create, Read, Update, and Delete, which represent the basic operations that can be performed on data using  javascript",
       category: ["js",'css'],
       git:"https://github.com/EsraaFathi/Crud-System.git",
-      web:"",
+      web:"https://esraafathi.github.io/CRUD-/",
       imgpath: "./images/crud_REC.png",
     },
   ];
