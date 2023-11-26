@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./Main.css";
 import { AllProjects } from "./AllProjects";
+
 import { AnimatePresence, motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import Video from '../video.jsx'
+// import { useNavigate } from "react-router-dom";
 
 // const cssProjects=[
 //   {title:"one nnnnnnn",subtitle:" subtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitle",
@@ -27,6 +29,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Main() {
   const [showMore, setShowMore] = useState(false);
+  const [showVideo, setshowVideo] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   const [projectarr, setprojectarr] = useState(AllProjects);
 
@@ -43,8 +47,15 @@ export default function Main() {
     });
     setprojectarr(cssProjects);
   };
-
-  const navigate = useNavigate();
+const handleShow = (item)=>{
+  // projectarr.find((x)=>
+  //   x.id==id
+  // )
+  // console.log(id)
+  setSelectedVideo(item)
+  setshowVideo(true)
+}
+  // const navigate = useNavigate();
   return (
     <>
       <main className="flex">
@@ -125,20 +136,77 @@ export default function Main() {
                   transition={{ type: "spring", damping: 8, stiffness: 50 }}
                   className=" card"
                 >
-                  <img src={item.imgpath} alt="" />
+     
+                  {/* <img src={item.imgpath} alt=""  
+                  className=""  
+                  onClick={()=>{
+                    setshowVideo(true)
+                   }}/> */}
+
+<video className="videocard" 
+ poster={item.imgpath} 
+
+onClick={()=>{
+  handleShow(item)
+  // setshowVideo(true)
+ }}>
+        <source src={item.videoPath}  />
+      </video>
+
+
+
+      {selectedVideo && (
+  <div  className="videoBG  flex">
+
+<div className="  containerVID">
+  <div className=" editBGvid">
+  <motion.h1 
+initial={{scale:0}}
+animate={{scale:1}}
+transition={{duration:2}}
+className="sizetitle">
+    {item.title}
+
+</motion.h1>
+
+
+  <button className='icon-x  editicon ' onClick={()=>{
+      setshowVideo(false)
+    }} />
+
+  </div>
+
+
+    <div>
+    <Video item={item}/>
+
+    </div>
+</div>
+
+  
+
+  </div>
+
+)}
+
+
+
+
+
+
                   <div style={{ width: "22rem" }} className=" box">
                     <h1 className="title">{item.title}</h1>
                     <p className="subtitle">
                       {/* {item.subtitle} */}
-                      {showMore ? text : `${text.substring(0, 100)}`}
+                      {showMore ? text : `${text.substring(0, 85)}`}
                     </p>
                     <div className="flex icons">
                       <div style={{ gap: "11px" }} className="flex">
-                        <a href={item.web}>
+                        <a href={item.web} target="-blank">
                           <div className="icon-link"></div>
                         </a>
 
-                        <a href={item.git}>
+                        <a href={item.git} target="-blank">
                           <div className="icon-github"> </div>
                         </a>
                         {/* <div className="icon-github" onClick={()=>{navigate('https://github.com/EsraaFathi/Crud-System.git')}}> </div> */}
@@ -155,10 +223,26 @@ export default function Main() {
                       </span>
                     </div>
                   </div>
+
+
+
+
+
+
+
+
+
                 </motion.article>
+
+
+
+
+
               );
             })}
           </AnimatePresence>
+
+
         </section>
       </main>
     </>

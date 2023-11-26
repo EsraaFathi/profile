@@ -7,6 +7,8 @@ import Main from './components/3 main/Main';
 // import ParticlesBackground from './components/particles';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Applayout from './components/Applayout';
+import Video from './components/video';
+
 import Home from './components/Home'
 function App() {
 
@@ -19,7 +21,9 @@ const router =createBrowserRouter([
 
         {path :'/contact', element:<Contact />},
         {path:'/projects', element:<Main />},
-        {path:'/hero', element:<Hero />}
+        {path:'/hero', element:<Hero />},
+        {path:'/video', element:<Video />}
+
         // {path:'/conact-us',element:<Contact />},
 
 

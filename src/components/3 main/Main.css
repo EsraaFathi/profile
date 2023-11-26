@@ -114,25 +114,75 @@ main section.right-secction {
     border: 1px solid var(--lightpurple);
     transition: 0.3s;
     border-radius: 5px;
+    box-shadow: 0.2px 0.1px 10px  var(--purple);
+
     /* background-image: linear-gradient(rgba(236, 90, 236, 0.103),rgb(173, 62, 149)); */
 }
 
 .card:hover {
     border: 1px solid var(--purple);
-    rotate: 1deg;
-    scale: 1.02;
+    /* rotate: 1deg; */
+    /* scale: 1.02; */
     cursor: pointer;
 }
 
-.card img {
+.card .videocard {
     height: 13rem;
     width: 23rem;
     object-fit: cover;
     border-radius: 5px;
 }
 
+.customvideo{
+    box-shadow: 10px 5px 40px  var(--purple);
+    width:800px;
+    height:600px;
+}
 
+.videoBG{
+    display:flex;
+    
+    /* text-align:center; */
+    align-items:center;
+    justify-content:center;
+    position: fixed;
+    width:100%;
+    height:100%;
+   top: 0;
+bottom: 0;
+right: 0;
+left: 0;  
+   z-index: 80;
+   background-color: rgba(2, 2, 2, 0.7);
+backdrop-filter: blur(2px);
+}
+.videoBG  .editBGvid{
+    display:flex;
+    flex-direction:row;
+text-align:right;
+    justify-content: space-between;
+    padding-bottom:10px;
 
+}
+.sizetitle{
+    font-size:4rem;
+
+}
+
+.containerVID{
+    flex-direction:column;
+    width:800px;
+    height: 600px;
+    background-color: rgba(2, 2, 2, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+.editicon{
+    text-align:right;
+    font-size:2rem;
+    color:var(--purple);
+
+}
 /* ===========
 3.Resposive Design
 
