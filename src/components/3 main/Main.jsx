@@ -3,7 +3,7 @@ import "./Main.css";
 import { AllProjects } from "./AllProjects";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Video from '../video.jsx'
+import Video from "../video.jsx";
 // import { useNavigate } from "react-router-dom";
 
 // const cssProjects=[
@@ -47,18 +47,23 @@ export default function Main() {
     });
     setprojectarr(cssProjects);
   };
-const handleShow = (item)=>{
-  // projectarr.find((x)=>
-  //   x.id==id
-  // )
-  // console.log(id)
-  setSelectedVideo(item)
-  setshowVideo(true)
-}
+  const handleShow = (item) => {
+    // projectarr.find((x)=>
+    //   x.id==id
+    // )
+    console.log(item);
+    setSelectedVideo(item);
+    setshowVideo(true);
+  };
+
+  const closeModal = () => {
+    setSelectedVideo(null);
+    showVideo(false);
+  };
   // const navigate = useNavigate();
   return (
     <>
-      <main className="flex">
+      <main className="flex main">
         <section className=" flex left-section ">
           <button
             onClick={() => {
@@ -136,66 +141,49 @@ const handleShow = (item)=>{
                   transition={{ type: "spring", damping: 8, stiffness: 50 }}
                   className=" card"
                 >
-     
                   {/* <img src={item.imgpath} alt=""  
                   className=""  
                   onClick={()=>{
                     setshowVideo(true)
                    }}/> */}
 
-<video className="videocard" 
- poster={item.imgpath} 
+                  <video
+                    className="videocard"
+                    poster={item.imgpath}
+                    type="video/mp4"
+                    onClick={() => {
+                      handleShow(item);
+                      // setshowVideo(true)
+                    }}
+                  >
+                    <source src={item.videoPath} />
+                  </video>
 
-onClick={()=>{
-  handleShow(item)
-  // setshowVideo(true)
- }}>
-        <source src={item.videoPath}  />
-      </video>
+                  {selectedVideo && showVideo && selectedVideo === item && (
+                    <div className="videoBG  flex">
+                      <div className="  containerVID">
+                        <div className=" editBGvid">
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 2 }}
+                            className="sizetitle"
+                          >
+                            {item.title}
+                          </motion.div>
 
+                          <button className="icon-x  editicon " onClick={closeModal} />
+                        </div>
 
+                        <div>
+                          <Video item={item} />
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
-      {selectedVideo && (
-  <div  className="videoBG  flex">
-
-<div className="  containerVID">
-  <div className=" editBGvid">
-  <motion.h1 
-initial={{scale:0}}
-animate={{scale:1}}
-transition={{duration:2}}
-className="sizetitle">
-    {item.title}
-
-</motion.h1>
-
-
-  <button className='icon-x  editicon ' onClick={()=>{
-      setshowVideo(false)
-    }} />
-
-  </div>
-
-
-    <div>
-    <Video item={item}/>
-
-    </div>
-</div>
-
-  
-
-  </div>
-
-)}
-
-
-
-
-
-
-                  <div style={{ width: "22rem" }} className=" box">
-                    <h1 className="title">{item.title}</h1>
+                  <div className=" box">
+                    <div className="title">{item.title}</div>
                     <p className="subtitle">
                       {/* {item.subtitle} */}
                       {showMore ? text : `${text.substring(0, 85)}`}
@@ -223,26 +211,10 @@ className="sizetitle">
                       </span>
                     </div>
                   </div>
-
-
-
-
-
-
-
-
-
                 </motion.article>
-
-
-
-
-
               );
             })}
           </AnimatePresence>
-
-
         </section>
       </main>
     </>

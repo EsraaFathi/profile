@@ -9,7 +9,8 @@ conyent table
 } */
 
 section.hero {
-    margin-top: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* ===========
@@ -22,66 +23,60 @@ section.hero {
 } */
 
 section .left-section {
-   
-    flex-grow: 1;
+  flex-grow: 1;
 }
-section .avatar{
-    border-radius: 50%;
-    width: 150px;
-    border:1px solid pink;
-    padding: 1px;
-    box-shadow: 2px 2px 10px rgb(245, 165, 218) ;
-}
-
-section .parent-avatar{
-    min-height: 150px;
-}
-section .icon-verified{
-    color: var(--purple);
-    /* margin-bottom: 0.53rem; */
+section .avatar {
+  border-radius: 50%;
+  width: 150px;
+  border: 1px solid pink;
+  padding: 1px;
+  box-shadow: 2px 2px 10px rgb(245, 165, 218);
 }
 
-
-section .title{
-    font-size: 2.5rem;
-    line-height: 3.3rem;
-    margin: 24px 0;
-    color: var(--title);
+section .parent-avatar {
+  min-height: 150px;
 }
-section  .subtitle{
-    color: var(--subtitle);
-    font-size: 1.3rem;
-    line-height: 1.7rem;
-    margin-bottom: 32px;
-}
-section .all-icons{
-    gap: 1.5rem;
-    font-size: 1.5rem;
-    color: var(--subtitle);
-  
-}
-section .icon:hover{
-/* font-size: 1.7rem; */
-cursor: pointer;
-transition: 0.3s;
-color: var(--purple);
-box-shadow: 1px 1px 30px var(--title);
-border-radius: 50%;
+section .icon-verified {
+  color: var(--purple);
+  /* margin-bottom: 0.53rem; */
 }
 
-
-
+section .title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 15px 0;
+  color: var(--title);
+}
+section .subtitle {
+  color: var(--subtitle);
+  font-size: 1rem !important;
+  line-height: 1.7rem;
+  margin-bottom: 1rem;
+}
+section .all-icons {
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--subtitle);
+}
+section .icon:hover {
+  /* font-size: 1.7rem; */
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--purple);
+  box-shadow: 1px 1px 30px var(--title);
+  border-radius: 50%;
+}
 
 /* =========
 2.right section = animation
 ============ */
-.animationlaptop{
-    width: 100%;
-    translate: 10px 55px;
+.animationlaptop {
+  width: 100%;
+  translate: 10px 55px;
 }
 
-@media (max-width:1000px) {
-    .animationlaptop{
-      display: none;}
-      
+@media (max-width: 1000px) {
+  .animationlaptop {
+    display: none;
+  }
 }
