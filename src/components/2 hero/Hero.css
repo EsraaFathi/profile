@@ -7,7 +7,12 @@ conyent table
     outline: 1px solid red;
     background-color: rgba(127, 255, 212, 0.055);
 } */
+.qr{
+  width: 190px;
+  height: 190px;
+    padding-left: 2rem;
 
+}
 section.hero {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -23,6 +28,12 @@ section.hero {
 } */
 
 section .left-section {
+     word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+      max-width: 100%; 
+    /* padding: 10px; */
+
   flex-grow: 1;
 }
 section .avatar {
@@ -48,12 +59,21 @@ section .title {
   color: var(--title);
 }
 section .subtitle {
+    text-align: justify;
   color: var(--subtitle);
   font-size: 1rem !important;
   line-height: 1.7rem;
   margin-bottom: 1rem;
+  
 }
-section .all-icons {
+/* section .title,
+section .subtitle {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+} */
+.all-icons {
   gap: 1.5rem;
   font-size: 1.5rem;
   color: var(--subtitle);

@@ -45,7 +45,7 @@ header.flex {
 header.flex nav {
    background-color: var(--bgHeader);
    padding: 0.77rem 1.6rem;
-   border-radius: 55px;
+   border-radius: 1rem;
    box-shadow: 10px 5px 15px var(--purple);
 }
 

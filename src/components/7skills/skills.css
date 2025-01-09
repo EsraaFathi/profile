@@ -1,0 +1,33 @@
+
+.skillsContainer{
+    display: flex;
+    flex-direction: column;
+        gap: 4rem;
+
+}
+.skills{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skillIcon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--purple);
+    align-self: center;
+    
+   
+
+}
+/* @media (max-width: 700px) {
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+} */

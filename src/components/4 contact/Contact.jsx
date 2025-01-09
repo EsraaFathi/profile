@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Lottie from "lottie-react";
 
@@ -18,36 +19,71 @@ export default function Contact() {
         </h1>
 
         <p className="subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et pariatur minima veritatis iste aliquam. Architecto,
-          facere.
+          I'm pleased to message me on my email. Feel free to reach out anytime
+          at [esraafa2411@gmail.com] or leave your message here.
         </p>
 
         <div style={{ justifyContent: "space-between" }} className=" flex">
           <form onSubmit={handleSubmit} className="">
             <div className="flex">
               <label htmlFor="email">Email Adress</label>
-              <input autoComplete="off" placeholder="Email Adress" required type="email" id="email" />
-              <ValidationError prefix="Email" field="email" errors={state.errors} />
+              <input
+                autoComplete="off"
+                // placeholder="Email Adress"
+                required
+                type="email"
+                id="email"
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
             </div>
 
             <div style={{ marginTop: "24px" }} className="flex">
               <label htmlFor="textarea">Your Message</label>
-              <textarea required placeholder="type your message" name="textarea" id="textarea"></textarea>
-              <ValidationError prefix="Textarea" field="textarea" errors={state.errors} />
+              <textarea
+                required
+                // placeholder="Type your message"
+                name="textarea"
+                className="textarea"
+                id="textarea"
+              ></textarea>
+              <ValidationError
+                prefix="Textarea"
+                field="textarea"
+                errors={state.errors}
+              />
             </div>
 
-            <button type="submit" disabled={state.submitting} className="submit">
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="submit"
+            >
               {state.submitting ? "submitting..." : "submit"}
             </button>
             {state.succeeded && (
-              <p className="flex" style={{ fontSize: "18px", marginTop: "1.7rem" }}>
-                <Lottie style={{ height: "55px" }} animationData={doneAnimation} loop={false} />
+              <p
+                className="flex"
+                style={{ fontSize: "18px", marginTop: "1.7rem" }}
+              >
+                <Lottie
+                  style={{ height: "55px" }}
+                  animationData={doneAnimation}
+                  loop={false}
+                />
                 Your message sent successfully !
               </p>
             )}
           </form>
           <div className=" flex animation">
-            <Lottie className="conyactAnimation" animationData={conyactAnimation} loop={true} />
+            <Lottie
+              className="conyactAnimation"
+              animationData={conyactAnimation}
+              loop={true}
+            />
           </div>
         </div>
       </section>

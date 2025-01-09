@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [showModal, setshowModal] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
+  const [theme, setTheme] = useState(
+    localStorage.getItem("currentMode") ?? "dark"
+  );
 
   useEffect(() => {
     if (theme == "light") {
@@ -40,6 +42,12 @@ export default function Header() {
             <li>
               <NavLink to="/projects">Projects</NavLink>
             </li>
+            <li>
+              <NavLink to="/skills">Skills</NavLink>
+            </li>
+            <li>
+              <NavLink to="/certificates">Certificates</NavLink>
+            </li>
 
             {/* <li>
     <NavLink to="/hero">
@@ -57,7 +65,10 @@ export default function Header() {
 
         <button
           onClick={() => {
-            localStorage.setItem("currentMode", theme == "dark" ? "light" : "dark");
+            localStorage.setItem(
+              "currentMode",
+              theme == "dark" ? "light" : "dark"
+            );
             setTheme(localStorage.getItem("currentMode"));
           }}
           className="mode flex"
@@ -82,9 +93,14 @@ export default function Header() {
               <li>
                 <NavLink to="/hero">About</NavLink>
               </li>
-
               <li>
                 <NavLink to="/projects">Projects</NavLink>
+              </li>
+              <li>
+                <NavLink to="/skills">Skills</NavLink>
+              </li>
+              <li>
+                <NavLink to="/certificates">Certificates</NavLink>
               </li>
 
               {/* <li>
