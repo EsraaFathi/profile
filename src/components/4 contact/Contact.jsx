@@ -20,7 +20,7 @@ export default function Contact() {
 
         <p className="subtitle">
           I'm pleased to message me on my email. Feel free to reach out anytime
-          at [esraafa2411@gmail.com] or leave your message here.
+          at [khaledmohamed.96@outlook.com] or leave your message here.
         </p>
 
         <div style={{ justifyContent: "space-between" }} className=" flex">

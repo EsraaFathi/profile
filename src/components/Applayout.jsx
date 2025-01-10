@@ -1,13 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Header from "./1 header/Header";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
-import { TbCircleNumber5 } from "react-icons/tb";
-import { BsFillRecordCircleFill } from "react-icons/bs";
-import { SiUpwork } from "react-icons/si";
-import { SiFreelancer } from "react-icons/si";
 
 import Footer from "./5 footer/Footer";
 import "./2 hero/Hero.css";
@@ -47,7 +43,7 @@ function AppLayout() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/esraa-fathy-14673a283/"
+            href="https://www.linkedin.com/in/khaled-mohamed08/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,52 +52,16 @@ function AppLayout() {
 
           {/* GitHub */}
           <a
-            href="https://github.com/EsraaFathi"
+            href="https://github.com/KhaledMohamed08"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub className="iconcolor" />
           </a>
 
-          {/* Khamsat */}
-          <a
-            href="https://khamsat.com/user/israa_fathy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TbCircleNumber5 className="iconcolor" />
-          </a>
-
-          {/* Mostaql */}
-          <a
-            href="https://mostaql.com/u/Israa_Fathy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BsFillRecordCircleFill className="iconcolor" />
-          </a>
-
-          {/* Freelancer */}
-          <a
-            href="https://www.freelancer.com/u/esraafa2411"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiFreelancer className="iconcolor" />
-          </a>
-
-          {/* Upwork */}
-          <a
-            href="https://www.upwork.com/freelancers/~0198105425acf9c172"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiUpwork className="iconcolor" />
-          </a>
-
           {/* Email */}
           <a
-            href="mailto:esraafa2411@gmail.com?subject=Hello&body=I would like to connect with you."
+            href="mailto:khaledmohamed.96@outlook.com?subject=Hello&body=I would like to connect with you."
             title="Send an Email"
           >
             <MdOutlineEmail className="iconcolor" />

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 
 export default function Hero() {
-  const phoneNumber = "201110496272";
+  const phoneNumber = "201093833112";
   const message = "Hello! I would like to contact you.";
 
   // Framer Motion Variants for Character Animation
@@ -23,23 +23,23 @@ export default function Hero() {
     }),
   };
 
-  const titleText = "Esraa Fathy ";
+  const titleText = "Khaled Mohamed ";
 
   return (
     <>
       <section className="hero flex">
         <div className="left-section">
-          <div className="">
+          {/* <div className="">
             <motion.img
               initial={{ transform: "scale(0)" }}
               animate={{ transform: "scale(1)" }}
               transition={{ damping: 6, type: "spring", stiffness: 100 }}
               src="/LOG1.png"
               className="avatar"
-              alt="Esraa Fathy Ahmed Avatar"
+              alt="Khaled_Mohamed Avatar"
             />
             <span className="icon-verified"></span>
-          </div>
+          </div> */}
 
           {/* Title Section */}
           <motion.h2
@@ -64,7 +64,7 @@ export default function Hero() {
           </p>
 
           {/* Download CV Button */}
-          <a href="/EsraaFathyCV.pdf" download="EsraaFathyCV.pdf">
+          <a href="/Khaled_Mohamed_CV.pdf" download="Khaled_Mohamed_CV.pdf">
             <button>Download CV</button>
           </a>
         </div>

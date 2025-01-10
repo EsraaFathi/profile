@@ -19,32 +19,32 @@ html {
 :root {
   --primary: #000;
   --secondary: rgba(104, 93, 104, 0.039);
-  --border: rgba(125, 51, 109, 0.395);
+  --border: rgba(51, 97, 125, 0.395);
   --title: rgb(244, 244, 245);
-  --subtitle: rgb(233, 198, 228);
-  --bgHeader: rgb(39 39 42);
-  --purple: rgb(248, 67, 209);
-  --hoverheader: #e736d0;
-    --btn: rgb(100, 95, 99);
+  --subtitle: rgb(198, 209, 233);
+  --bgHeader: rgba(39, 39, 42, 0.436);
+  --purple: rgb(67, 185, 248);
+  --hoverheader: #3686e7;
+  --btn: rgb(100, 95, 99);
 
   --write: rgb(247, 241, 245);
-  --lightpurple: rgba(248, 67, 209, 0.2);
+  --lightpurple: rgba(67, 179, 248, 0.2);
   --containerpadding: 4.8rem;
 }
 
 .light {
   --primary: white;
   --secondary: rgba(153, 135, 151, 0.139);
-  --border: rgba(125, 51, 109, 0.116);
+  --border: rgba(51, 105, 125, 0.116);
   --title: rgb(27, 22, 27);
-  --subtitle: rgb(105, 23, 94);
-  --bgHeader: rgb(199, 86, 174);
-  --purple: rgb(248, 67, 209);
+  --subtitle: rgb(23, 63, 105);
+  --bgHeader: rgba(86, 148, 199, 0.253);
+  --purple: #43aaf8;
   --btn: rgb(208, 194, 205);
 
   --hoverheader: #f1e6ee;
-  --lightpurple: rgba(248, 67, 209, 0.2);
-  --write: rgb(102, 8, 71);
+  --lightpurple: rgba(67, 155, 248, 0.2);
+  --write: rgb(8, 47, 102);
   --containerpadding: 4.8rem;
 }
 
@@ -52,20 +52,26 @@ body {
   background-color: var(--primary);
   overflow-x: hidden;
 }
-.mylinks{
+.mylinks {
   border: 1px solid var(--border);
   border-radius: 0.5rem;
-  margin: 1rem ;
-  background-color: var(--secondary);
+  margin: 1rem;
+  /* background-color: var(--secondary); */
   backdrop-filter: blur(0px);
-  padding: 10px ;
+  background-color: var(--bgHeader);
+  padding: 0.4rem 1rem;
+  box-shadow: 1px 0px 2px var(--purple);
 }
-.mylinksdisplay{
+.mylinksdisplay {
   display: block;
-
 }
-.iconcolor{
-  color: #f376e2e8;
+
+.iconcolor:hover {
+  /* color: white; */
+  color: #6fcde7e8;
+}
+.iconcolor {
+  color: var(--title);
 }
 .container {
   border: 1px solid var(--border);
@@ -107,8 +113,7 @@ a {
 }
 button {
   all: unset;
-    color: var(--title);
-
+  color: var(--title);
 }
 
 button:hover {
@@ -134,9 +139,9 @@ button:disabled {
   }
 }
 @media (max-width: 400px) {
- .mylinksdisplay{
-  display: none;
- }
+  .mylinksdisplay {
+    display: none;
+  }
 }
 /* for Firefox */
 html {
