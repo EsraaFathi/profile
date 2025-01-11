@@ -7,11 +7,10 @@ conyent table
     outline: 1px solid red;
     background-color: rgba(127, 255, 212, 0.055);
 } */
-.qr{
+.qr {
   width: 190px;
   height: 190px;
-    padding-left: 2rem;
-
+  padding-left: 2rem;
 }
 section.hero {
   margin-top: 3rem;
@@ -28,20 +27,21 @@ section.hero {
 } */
 
 section .left-section {
-     word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-      max-width: 100%; 
-    /* padding: 10px; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+  /* padding: 10px; */
 
   flex-grow: 1;
 }
 section .avatar {
-  border-radius: 50%;
-  width: 150px;
-  border: 1px solid pink;
+  /* border-radius: 50%; */
+  width: 800px;
+  height: 500px;
+  /* border: 1px solid pink; */
   padding: 1px;
-  box-shadow: 2px 2px 10px rgb(245, 165, 218);
+  /* box-shadow: 2px 2px 10px rgb(245, 165, 218); */
 }
 
 section .parent-avatar {
@@ -59,12 +59,11 @@ section .title {
   color: var(--title);
 }
 section .subtitle {
-    text-align: justify;
+  text-align: justify;
   color: var(--subtitle);
   font-size: 1rem !important;
   line-height: 1.7rem;
   margin-bottom: 1rem;
-  
 }
 /* section .title,
 section .subtitle {

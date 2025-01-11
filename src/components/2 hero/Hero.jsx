@@ -71,11 +71,20 @@ export default function Hero() {
 
         {/* Right Section */}
         <div className="right-section animationlaptop">
-          <Lottie
+          {/* <image src="/public/kaled.png" /> */}
+          <motion.img
+            initial={{ transform: "scale(0)" }}
+            animate={{ transform: "scale(1)" }}
+            transition={{ damping: 6, type: "spring", stiffness: 100 }}
+            src="/kaled.png"
+            className="avatar"
+            alt="Khaled_Mohamed Avatar"
+          />
+          {/* <Lottie
             onLoadedImages={() => {}}
             animationData={laptopAnimation}
             loop={true}
-          />
+          /> */}
         </div>
       </section>
     </>
